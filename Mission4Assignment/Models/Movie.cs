@@ -6,15 +6,16 @@ using System.Threading.Tasks;
 
 namespace Mission4Assignment.Models
 {
-    public class Movie { 
-    
+    public class Movie {
+
         [Key]
         [Required]
         public int MovieID { get; set; }
         [Required]
         public string Title { get; set; }
         [Required]
-        public string Category { get; set; }
+        public int CategoryID { get; set; }
+        public Category Category {get; set;}
         [Required]
         public int Year { get; set; }
         [Required]

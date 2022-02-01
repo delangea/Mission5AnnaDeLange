@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\annad\\OneDrive - Brigham Young University\\Documents\\GitHub\\Mission4DeLange\\Mission4Assignment\\Mission4Assignment.csproj": {}
+    "C:\\Users\\annad\\OneDrive - Brigham Young University\\Documents\\GitHub\\Mission5AnnaDeLange\\Mission4Assignment\\Mission4Assignment.csproj": {}
   },
   "projects": {
-    "C:\\Users\\annad\\OneDrive - Brigham Young University\\Documents\\GitHub\\Mission4DeLange\\Mission4Assignment\\Mission4Assignment.csproj": {
+    "C:\\Users\\annad\\OneDrive - Brigham Young University\\Documents\\GitHub\\Mission5AnnaDeLange\\Mission4Assignment\\Mission4Assignment.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\annad\\OneDrive - Brigham Young University\\Documents\\GitHub\\Mission4DeLange\\Mission4Assignment\\Mission4Assignment.csproj",
+        "projectUniqueName": "C:\\Users\\annad\\OneDrive - Brigham Young University\\Documents\\GitHub\\Mission5AnnaDeLange\\Mission4Assignment\\Mission4Assignment.csproj",
         "projectName": "Mission4Assignment",
-        "projectPath": "C:\\Users\\annad\\OneDrive - Brigham Young University\\Documents\\GitHub\\Mission4DeLange\\Mission4Assignment\\Mission4Assignment.csproj",
+        "projectPath": "C:\\Users\\annad\\OneDrive - Brigham Young University\\Documents\\GitHub\\Mission5AnnaDeLange\\Mission4Assignment\\Mission4Assignment.csproj",
         "packagesPath": "C:\\Users\\annad\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\annad\\OneDrive - Brigham Young University\\Documents\\GitHub\\Mission4DeLange\\Mission4Assignment\\obj\\",
+        "outputPath": "C:\\Users\\annad\\OneDrive - Brigham Young University\\Documents\\GitHub\\Mission5AnnaDeLange\\Mission4Assignment\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\annad\\AppData\\Roaming\\NuGet\\NuGet.Config",

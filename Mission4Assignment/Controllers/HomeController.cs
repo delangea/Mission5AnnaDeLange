@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Mission4Assignment.Models;
 using System;
@@ -36,6 +37,7 @@ namespace Mission4Assignment.Controllers
         [HttpGet]
         public IActionResult Movies()
         {
+            ViewBag.Categories = _blahContext.category.ToList();
             return View();
         }
         [HttpPost]
@@ -44,6 +46,47 @@ namespace Mission4Assignment.Controllers
             _blahContext.Add(m);
             _blahContext.SaveChanges();
             return View(m);
+        }
+        public IActionResult MovieList()
+        {
+            var movies = _blahContext.responses.Include(a => a.Category).ToList();
+            return View(movies);
+        }
+        [HttpGet]
+        public IActionResult Edit(int movieid)
+        {
+            ViewBag.Categories = _blahContext.category.ToList();
+            var movie = _blahContext.responses.Single(x => x.MovieID == movieid);
+            return View("Movies", movie);
+        }
+        [HttpPost]
+        public IActionResult Edit(Movie m)
+        {
+            if (ModelState.IsValid)
+            {
+                _blahContext.Update(m);
+                _blahContext.SaveChanges();
+
+                return RedirectToAction("MovieList");
+            }
+            else
+            {
+                ViewBag.Categories = _blahContext.category.ToList();
+                return View(m);
+            }
+        }
+        [HttpGet]
+        public IActionResult Delete(int movieid)
+        {
+            var movie = _blahContext.responses.Single(x => x.MovieID == movieid);
+            return View(movie);
+        }
+        [HttpPost]
+        public IActionResult Delete(Movie m)
+        {
+            _blahContext.responses.Remove(m);
+            _blahContext.SaveChanges();
+            return RedirectToAction("MovieList");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
