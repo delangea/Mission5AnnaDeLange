@@ -43,9 +43,18 @@ namespace Mission4Assignment.Controllers
         [HttpPost]
         public IActionResult Movies(Movie m)
         {
-            _blahContext.Add(m);
-            _blahContext.SaveChanges();
-            return View(m);
+            if (ModelState.IsValid)
+            {
+                _blahContext.Add(m);
+                _blahContext.SaveChanges();
+
+                return RedirectToAction("MovieList");
+            }
+            else
+            {
+                ViewBag.Categories = _blahContext.category.ToList();
+                return View(m);
+            }
         }
         public IActionResult MovieList()
         {
